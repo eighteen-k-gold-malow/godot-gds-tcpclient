@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	tcp_client.poll()
 
 func on_connect(sender:TCPClient) -> void:
-	print("connect")
+	print("on_connect")
 	sender.put_data("GET / HTTP/1.1\r\nHost: baidu.com\r\n\r\n".to_utf8_buffer())
 
 func on_disconnect(sender:TCPClient) -> void:
